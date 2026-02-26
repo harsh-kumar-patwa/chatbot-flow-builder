@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const app = express();
-const PORT = 3001;
+const PORT = Number(process.env.PORT) || 3001;
 const DATA_FILE = path.join(import.meta.dirname, "data", "flow.json");
 
 app.use(cors());
